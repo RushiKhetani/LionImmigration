@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Lion Consultancy — Talk to a Real Advisor</title>
+<meta name="description" content="Contact Lion Consultancy on WhatsApp, phone or email. We reply within 24 hours. Employer manpower requests welcome.">
+<meta property="og:title" content="Contact Lion Consultancy">
+<meta property="og:description" content="Talk to a real advisor. We reply within 24 hours.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1B33'/%3E%3Cpath d='M16 6l3 3 4-1-1 4 2 3-2 3-4-1-2 3-2-3-4 1 1-4-2-3 2-3 4 1z' fill='%23C9A24B'/%3E%3C/svg%3E">
+<!-- META PIXEL PLACEHOLDER -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"LocalBusiness","name":"Lion Consultancy",
+  "telephone":"[PHONE]","email":"[EMAIL]",
+  "address":{"@type":"PostalAddress","streetAddress":"[ADDRESS]"},
+  "openingHours":"Mo-Fr 09:00-18:00"
+}
+</script>
+<style>
+/* ---- Contact-page specific styles ---- */
+
+/* Contact hero with illustrated speech bubbles */
+.contact-hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--navy),var(--navy-2) 60%,var(--navy));
+  color:#fff;padding:clamp(44px,6vw,84px) 0;
+}
+.contact-hero::before{
+  content:"";position:absolute;top:-20%;right:-5%;width:45%;height:140%;
+  background:radial-gradient(circle,rgba(201,162,75,.2),transparent 65%);pointer-events:none;
+}
+.contact-hero-grid{display:grid;gap:28px;align-items:center;position:relative;z-index:1}
+@media(min-width:900px){ .contact-hero-grid{grid-template-columns:1.1fr .9fr} }
+.contact-hero h1{color:#fff}
+.contact-hero .lead{color:#C9D3E2}
+
+/* Chat bubbles illustration */
+.chat-illus{position:relative;max-width:360px;margin:0 auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))}
+.chat-bubble{
+  padding:14px 18px;border-radius:16px;font-size:.85rem;font-weight:500;
+  position:relative;max-width:85%;margin-bottom:12px;box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+.chat-bubble.them{background:#fff;color:#111;border-bottom-left-radius:4px;animation:slideInLeft .6s var(--ease) both}
+.chat-bubble.us{background:linear-gradient(135deg,#25D366,#128C4A);color:#fff;margin-left:auto;border-bottom-right-radius:4px;animation:slideInRight .6s .2s var(--ease) both}
+.chat-bubble.us::after{content:"";position:absolute;bottom:0;right:-8px;border:8px solid transparent;border-left-color:#128C4A;border-bottom:0}
+.chat-bubble.them::after{content:"";position:absolute;bottom:0;left:-8px;border:8px solid transparent;border-right-color:#fff;border-bottom:0}
+.chat-bubble.typing{padding:16px 18px;max-width:70px;animation-delay:.4s}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:none}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
+
+/* Contact option cards with animated icons */
+.contact-opt{
+  display:flex;align-items:center;gap:16px;padding:24px;
+  border-radius:var(--radius);border:1px solid var(--line);background:var(--paper);
+  text-align:left;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
+  position:relative;overflow:hidden;
+}
+.contact-opt::before{content:"";position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .4s var(--ease)}
+.contact-opt:hover::before{transform:scaleY(1)}
+.contact-opt:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(201,162,75,.4)}
+
+/* Office illustration card */
+.office-illus{
+  position:relative;border-radius:var(--radius);overflow:hidden;
+  background:linear-gradient(135deg,var(--navy),var(--navy-3));
+  padding:32px;color:#fff;text-align:center;
+}
+.office-illus svg{width:100%;height:auto;max-height:200px;margin-bottom:16px}
+.office-illus h3{color:#fff}
+.office-illus p{color:#C9D3E2;font-size:.9rem}
+
+/* Working hours card */
+.hours-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.hours-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.hours-row:last-child{border-bottom:none}
+.hours-row .day{font-weight:600;color:var(--ink)}
+.hours-row .time{color:var(--muted);font-size:.88rem}
+.hours-row .time.closed{color:var(--danger);font-weight:600}
+
+/* Mini FAQ illustration */
+.mini-faq-illus{
+  width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#241a05;
+  box-shadow:0 6px 16px rgba(201,162,75,.35);margin-bottom:14px;
+}
+.mini-faq-illus svg{width:28px;height:28px}
+
+/* Map placeholder with illustration */
+.map-placeholder{
+  position:relative;aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;
+  background:linear-gradient(135deg,#E8EEF5,#DCE4EE);
+  border:1px dashed var(--line);display:grid;place-items:center;
+}
+html[data-theme="dark"] .map-placeholder{background:linear-gradient(135deg,#1a2232,#0f1725)}
+.map-placeholder svg{width:70%;height:auto;opacity:.4}
+.map-placeholder .label{
+  position:absolute;bottom:16px;left:16px;right:16px;
+  background:var(--paper);padding:12px 16px;border-radius:10px;
+  font-size:.82rem;color:var(--muted);box-shadow:var(--shadow);
+}
+.map-placeholder .label b{color:var(--ink);display:block;font-size:.92rem;margin-bottom:2px}
+
+/* WhatsApp mockup (reused on contact) */
+.contact-wa-mockup{
+  background:#E5DDD5;border-radius:var(--radius);padding:18px;
+  position:relative;overflow:hidden;
+}
+html[data-theme="dark"] .contact-wa-mockup{background:#1a2620}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Lion Consultancy home">
+      <svg viewBox="0 0 48 48" aria-hidden="true" role="img">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+          <path d="M24 5l4 4 5-1-1 5 4 4-4 4 1 5-5-1-4 4-4-4-5 1 1-5-4-4 4-4-1-5 5 1z"/><circle cx="24" cy="22" r="3"/>
+        </g>
+        <g fill="currentColor"><circle cx="24" cy="5" r="1.4"/><circle cx="33" cy="8" r="1.4"/><circle cx="38" cy="17" r="1.4"/><circle cx="38" cy="27" r="1.4"/><circle cx="33" cy="36" r="1.4"/><circle cx="24" cy="39" r="1.4"/><circle cx="15" cy="36" r="1.4"/><circle cx="10" cy="27" r="1.4"/><circle cx="10" cy="17" r="1.4"/><circle cx="15" cy="8" r="1.4"/></g>
+      </svg>
+      <div>Lion Consultancy<small>Overseas Recruitment</small></div>
+    </a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="jobs.html">Jobs</a>
+      <a href="documents.html">Documents</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <select id="lang" class="lang-select" aria-label="Language"><option value="en">EN</option><option value="hi">हिं</option><option value="gu">ગુ</option></select>
+      <a class="btn btn-wa" data-wa="Hello Lion Consultancy, I want to apply for a job abroad. Please guide me." href="#" aria-label="WhatsApp Us">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5-.1-.2-.5-1.4-.7-1.9-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+        <span data-i18n="wa">WhatsApp Us</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Mobile">
+      <a href="index.html">Home</a><a href="about.html">About Us</a><a href="jobs.html">Jobs</a>
+      <a href="documents.html">Documents</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ CONTACT HERO ============ -->
+<section class="contact-hero">
+  <div class="container contact-hero-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--gold-2)">Contact us</span>
+      <h1>Talk to a real advisor</h1>
+      <p class="lead mt-2">We reply within 24 hours. Choose WhatsApp, phone or email — whichever is easiest for you.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+        <a class="btn btn-wa" data-wa="Hello Lion Consultancy, I want to apply for a job abroad. Please guide me." href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5-.1-.2-.5-1.4-.7-1.9-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <a class="btn btn-ghost" data-call href="#" style="color:#fff;border-color:rgba(255,255,255,.3)">Call [PHONE]</a>
+      </div>
+    </div>
+
+    <!-- Chat bubble illustration -->
+    <div class="chat-illus" aria-hidden="true">
+      <div class="chat-bubble them">Hi, is the UAE construction job real?</div>
+      <div class="chat-bubble us">Yes! Here is the written offer and our licence. Please verify before paying anything.</div>
+      <div class="chat-bubble them typing"><span class="wa-typing"><span></span><span></span><span></span></span></div>
+      <div style="margin-top:14px;font-size:.74rem;color:#9FAEC4;text-align:center">Replies within 24 hours</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT OPTIONS ============ -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-3">
+      <a class="contact-opt reveal" data-wa="Hello Lion Consultancy, I want to apply for a job abroad. Please guide me." href="#" aria-label="Chat on WhatsApp">
+        <span class="ico wa" style="width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;color:#fff;background:linear-gradient(135deg,var(--green),#128C4A);box-shadow:0 6px 16px rgba(37,211,102,.35);transition:transform .4s var(--ease-spring)">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:26px;height:26px"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5-.1-.2-.5-1.4-.7-1.9-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+        </span>
+        <span><strong>WhatsApp</strong><span>Fastest reply · Chat now</span></span>
+      </a>
+      <a class="contact-opt reveal" data-delay="1" data-call href="#" aria-label="Call us">
+        <span class="ico call" style="width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;color:#fff;background:linear-gradient(135deg,var(--navy),var(--navy-3));box-shadow:0 6px 16px rgba(11,27,51,.25);transition:transform .4s var(--ease-spring)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:26px;height:26px"><path d="M4 5c0 8 7 15 15 15l2-3-4-3-2 2c-2-1-4-3-5-5l2-2-3-4z"/></svg>
+        </span>
+        <span><strong>Call</strong><span>[PHONE]</span></span>
+      </a>
+      <a class="contact-opt reveal" data-delay="2" data-mail href="#" aria-label="Email us">
+        <span class="ico mail" style="width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;color:#241a05;background:linear-gradient(135deg,var(--gold),var(--gold-2));box-shadow:0 6px 16px rgba(201,162,75,.35);transition:transform .4s var(--ease-spring)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:26px;height:26px"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </span>
+        <span><strong>Email</strong><span>[EMAIL]</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM + OFFICE ============ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:start;gap:36px">
+      <div>
+        <h2>Applicant enquiry</h2>
+        <p class="lead mt-2">Short form. We only ask what we need.</p>
+        <form class="form-card mt-6" data-form="contact-applicant" novalidate>
+          <div class="field">
+            <label for="c-name">Full name <span class="req">*</span></label>
+            <input id="c-name" name="name" type="text" required autocomplete="name">
+            <span class="err">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="c-phone">WhatsApp number <span class="req">*</span></label>
+            <input id="c-phone" name="phone" type="tel" required inputmode="tel" placeholder="Include country code">
+            <span class="err">Please enter a valid number (8–15 digits).</span>
+          </div>
+          <div class="field">
+            <label for="c-country">Country interested in</label>
+            <select id="c-country" name="country">
+              <option value="">Select</option>
+              <option>UAE</option><option>Qatar</option><option>Saudi Arabia</option>
+              <option>Malaysia</option><option>Europe</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-job">Job type</label>
+            <select id="c-job" name="job">
+              <option value="">Select</option>
+              <option>Construction</option><option>Hospitality</option><option>Driving</option>
+              <option>Security</option><option>Factory</option><option>Healthcare</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-exp">Experience level</label>
+            <select id="c-exp" name="experience">
+              <option value="">Select</option>
+              <option>Fresher (0–1 year)</option>
+              <option>1–3 years</option>
+              <option>3–5 years</option>
+              <option>5+ years</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" placeholder="Tell us briefly about your experience or question."></textarea>
+          </div>
+          <button class="btn btn-wa btn-block" type="submit">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5-.1-.2-.5-1.4-.7-1.9-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+            Send my enquiry
+          </button>
+          <p class="form-success" role="status">Thank you! A Lion Consultancy advisor will contact you within 24 hours.</p>
+          <p class="form-note">What happens next: an advisor reads your message, checks current vacancies for your profile, and replies on WhatsApp within 24 hours.</p>
+        </form>
+      </div>
+
+      <div>
+        <h2>Office details</h2>
+
+        <!-- Office illustration -->
+        <div class="office-illus mt-6">
+          <svg viewBox="0 0 400 200" aria-hidden="true">
+            <defs>
+              <linearGradient id="og" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#C9A24B"/><stop offset="1" stop-color="#E0BE6E"/>
+              </linearGradient>
+            </defs>
+            <!-- Building -->
+            <g transform="translate(100 40)">
+              <rect x="0" y="20" width="200" height="130" rx="8" fill="#132A4A" stroke="url(#og)" stroke-width="2"/>
+              <!-- Windows -->
+              <g fill="#C9A24B" opacity=".7">
+                <rect x="20" y="40" width="24" height="24" rx="3"/>
+                <rect x="58" y="40" width="24" height="24" rx="3"/>
+                <rect x="96" y="40" width="24" height="24" rx="3"/>
+                <rect x="134" y="40" width="24" height="24" rx="3"/>
+                <rect x="20" y="80" width="24" height="24" rx="3"/>
+                <rect x="58" y="80" width="24" height="24" rx="3"/>
+                <rect x="96" y="80" width="24" height="24" rx="3"/>
+                <rect x="134" y="80" width="24" height="24" rx="3" opacity=".3"/>
+              </g>
+              <!-- Door -->
+              <rect x="88" y="110" width="24" height="40" rx="2" fill="url(#og)"/>
+              <!-- Sign -->
+              <rect x="60" y="4" width="80" height="20" rx="4" fill="url(#og)"/>
+              <text x="100" y="18" text-anchor="middle" fill="#241a05" font-family="Fraunces,serif" font-size="11" font-weight="700">LION</text>
+            </g>
+            <!-- Person waving -->
+            <g transform="translate(60 100)">
+              <circle cx="0" cy="0" r="14" fill="url(#og)"/>
+              <path d="M-14 14 Q0 30 14 14 L14 80 L-14 80 Z" fill="#25D366"/>
+              <path d="M14 30 Q30 20 34 10" stroke="#25D366" stroke-width="6" stroke-linecap="round" fill="none"/>
+            </g>
+          </svg>
+          <h3>Visit our office</h3>
+          <p class="mt-2">[ADDRESS]</p>
+          <p class="mt-2" style="font-size:.85rem"><b style="color:var(--gold-2)">Hours:</b> Mon–Fri, 9:00–18:00 · Sat, 9:00–14:00 [VERIFY]</p>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder mt-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/>
+            <path d="M9 4v16M15 6v16"/>
+          </svg>
+          <div class="label">
+            <b>[REPLACE: embedded map]</b>
+            Paste a Google Maps embed iframe here before launch.
+          </div>
+        </div>
+
+        <!-- Working hours -->
+        <div class="hours-card mt-4">
+          <h3 style="margin-bottom:12px">Working hours</h3>
+          <div class="hours-row"><span class="day">Monday – Friday</span><span class="time">9:00 – 18:00</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span class="time">9:00 – 14:00</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span class="time closed">Closed</span></div>
+          <p style="font-size:.78rem;color:var(--muted);margin-top:10px"><span class="verify-tag">Verify</span> Working hours are placeholders.</p>
+        </div>
+
+        <!-- Safety notice -->
+        <div class="notice success mt-4">
+          <b>Safety notice.</b> We never ask for money on social media or personal accounts. Pay only against an official receipt at our office or official account.
+        </div>
+
+        <!-- Mini FAQ -->
+        <h3 class="mt-8">Mini FAQ</h3>
+        <div class="mt-4">
+          <div class="mini-faq-illus">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 4 3v1M12 17h.01"/></svg>
+          </div>
+          <details class="mt-2"><summary>How fast do you reply?</summary><div class="body">Within 24 hours on WhatsApp, usually much faster during working hours.</div></details>
+          <details class="mt-2"><summary>How do I verify your staff?</summary><div class="body">Call our office number from this page and ask for the person by name. We will confirm they work for Lion Consultancy. Never deal with someone who cannot be verified through the office.</div></details>
+          <details class="mt-2"><summary>Can I visit without an appointment?</summary><div class="body">Yes, during working hours. Bring your passport and any documents you have. It helps us help you faster.</div></details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMPLOYER FORM ============ -->
+<section class="section" id="employers" style="background:var(--paper)">
+  <div class="container">
+    <span class="eyebrow">For employers</span>
+    <h2>Request manpower</h2>
+    <p class="lead mt-2">Tell us the positions, numbers and timeline. We screen and document candidates before they reach you.</p>
+    <form class="form-card mt-6" data-form="employer-request" novalidate style="max-width:720px">
+      <div class="field">
+        <label for="e-company">Company name <span class="req">*</span></label>
+        <input id="e-company" name="company" type="text" required autocomplete="organization">
+        <span class="err">Please enter your company name.</span>
+      </div>
+      <div class="field">
+        <label for="e-country">Country <span class="req">*</span></label>
+        <input id="e-country" name="country" type="text" required>
+        <span class="err">Please enter the country.</span>
+      </div>
+      <div class="field">
+        <label for="e-positions">Positions needed <span class="req">*</span></label>
+        <input id="e-positions" name="positions" type="text" required placeholder="e.g. Construction workers, security guards">
+        <span class="err">Please list the positions.</span>
+      </div>
+      <div class="field">
+        <label for="e-numbers">Number of workers <span class="req">*</span></label>
+        <input id="e-numbers" name="numbers" type="number" min="1" required>
+        <span class="err">Please enter a number.</span>
+      </div>
+      <div class="field">
+        <label for="e-timeline">Timeline</label>
+        <select id="e-timeline" name="timeline">
+          <option value="">Select</option>
+          <option>Within 1 month</option>
+          <option>1–3 months</option>
+          <option>3–6 months</option>
+          <option>6+ months</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="e-email">Work email <span class="req">*</span></label>
+        <input id="e-email" name="email" type="email" required autocomplete="email">
+        <span class="err">Please enter a valid email.</span>
+      </div>
+      <button class="btn btn-gold btn-block" type="submit">Send manpower request</button>
+      <p class="form-success" role="status">Thank you! Our employer team will contact you within 2 working days.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Lion Consultancy">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M24 5l4 4 5-1-1 5 4 4-4 4 1 5-5-1-4 4-4-4-5 1 1-5-4-4 4-4-1-5 5 1z"/><circle cx="24" cy="22" r="3"/></g></svg>
+          <div>Lion Consultancy<small>Overseas Recruitment</small></div>
+        </a>
+        <p class="mt-2">Licensed overseas recruitment agency. Work visa, work permit and worker supply with transparent fees and written contracts.</p>
+        <span class="footer-license">Licence: [LICENSE NUMBER]</span>
+      </div>
+      <div><h4>Pages</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="jobs.html">Jobs</a><a href="documents.html">Documents</a><a href="contact.html">Contact</a></div>
+      <div><h4>Contact</h4><a data-call href="#">[PHONE]</a><a data-mail href="#">[EMAIL]</a><p class="mt-2">[ADDRESS]</p></div>
+      <div><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Refund Policy</a><p class="mt-2" style="font-size:.8rem">Safety note: we never ask for money on social media or personal accounts. Pay only against an official receipt.</p></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="yr"></span> Lion Consultancy. All rights reserved.</span><span>Licence: [LICENSE NUMBER] · [ADDRESS]</span></div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-navy" data-call href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8 7 15 15 15l2-3-4-3-2 2c-2-1-4-3-5-5l2-2-3-4z"/></svg>Call</a>
+  <a class="btn btn-wa" data-wa="Hello Lion Consultancy, I want to apply for a job abroad. Please guide me." href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5-.1-.2-.5-1.4-.7-1.9-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a>
+</div>
+
+<div class="consent" id="consent">
+  <span>We use cookies to improve your experience. See our <a href="#" style="color:var(--gold);font-weight:700">Privacy Policy</a>.</span>
+  <button class="btn btn-navy" data-consent>Got it</button>
+</div>
+
+<script src="script.js"></script>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>

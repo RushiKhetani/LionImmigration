@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documents Checklist for Overseas Jobs — Passport, Medical, Police Clearance | Lion Consultancy</title>
+<meta name="description" content="Get your documents ready before you apply for an overseas job. Interactive checklist: passport, photos, medical, police clearance and country-wise requirements.">
+<meta property="og:title" content="Documents Checklist — Lion Consultancy">
+<meta property="og:description" content="Interactive document checklist and country-wise requirements for overseas jobs.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1B33'/%3E%3Cpath d='M16 6l3 3 4-1-1 4 2 3-2 3-4-1-2 3-2-3-4 1 1-4-2-3 2-3 4 1z' fill='%23C9A24B'/%3E%3C/svg%3E">
+<!-- META PIXEL PLACEHOLDER -->
+<style>
+/* ---- Documents-page specific styles ---- */
+
+/* Hero with passport illustration */
+.docs-hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--navy),var(--navy-2) 60%,var(--navy));
+  color:#fff;padding:clamp(44px,6vw,84px) 0;
+}
+.docs-hero::before{
+  content:"";position:absolute;top:-20%;right:-5%;width:45%;height:140%;
+  background:radial-gradient(circle,rgba(201,162,75,.2),transparent 65%);pointer-events:none;
+}
+.docs-hero-grid{display:grid;gap:28px;align-items:center;position:relative;z-index:1}
+@media(min-width:900px){ .docs-hero-grid{grid-template-columns:1.2fr .8fr} }
+.docs-hero h1{color:#fff}
+.docs-hero .lead{color:#C9D3E2}
+.docs-hero .btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+/* Animated passport illustration */
+.passport-illus{position:relative;max-width:320px;margin:0 auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.4))}
+.passport-illus .float{animation:passportFloat 5s ease-in-out infinite}
+@keyframes passportFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+.passport-illus .stamp-anim{animation:stampPress 4s ease-in-out infinite}
+@keyframes stampPress{0%,70%,100%{transform:scale(1) rotate(-12deg);opacity:.85}80%{transform:scale(1.15) rotate(-12deg);opacity:1}85%{transform:scale(1) rotate(-12deg);opacity:.85}}
+
+/* Document category cards */
+.doc-cat{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
+  position:relative;overflow:hidden;
+}
+.doc-cat:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(201,162,75,.4)}
+.doc-cat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2))}
+.doc-cat .cat-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.doc-cat .cat-icon{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--navy),var(--navy-3));color:var(--gold-2);
+  box-shadow:0 4px 12px rgba(11,27,51,.2);
+  transition:transform .4s var(--ease-spring);
+}
+.doc-cat:hover .cat-icon{transform:rotate(-6deg) scale(1.08)}
+.doc-cat .cat-icon svg{width:22px;height:22px}
+.doc-cat h3{font-size:1.02rem;margin:0}
+
+/* Photo guideline diagrams */
+.guide-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;text-align:center;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.guide-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.guide-card svg{width:100%;height:auto;max-height:150px;margin-bottom:12px}
+.guide-card h3{font-size:1rem;margin-bottom:6px}
+.guide-card p{font-size:.86rem;color:var(--muted);margin:0}
+
+/* Country tab visual indicator */
+.country-flag-tab{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:3px 8px;border-radius:6px;background:var(--off-white);
+  font-size:.72rem;font-weight:700;color:var(--muted);margin-right:6px;
+}
+
+/* Timeline visual for documents page */
+.doc-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px;position:relative}
+@media(max-width:640px){ .doc-timeline{grid-template-columns:1fr 1fr} }
+.doc-timeline-step{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;text-align:center;position:relative;
+  transition:transform .3s var(--ease),border-color .3s var(--ease);
+}
+.doc-timeline-step:hover{transform:translateY(-3px);border-color:rgba(201,162,75,.4)}
+.doc-timeline-step .step-num{
+  width:36px;height:36px;border-radius:50%;margin:0 auto 10px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#241a05;
+  display:grid;place-items:center;font-family:var(--font-display);font-weight:700;font-size:.95rem;
+  box-shadow:0 4px 12px rgba(201,162,75,.35);
+}
+.doc-timeline-step h4{font-family:var(--font-body);font-size:.88rem;font-weight:700;margin-bottom:4px}
+.doc-timeline-step .t{font-size:.72rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+
+/* FAQ illustration */
+.faq-illus{width:80px;height:80px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),var(--navy-3));color:var(--gold-2);margin-bottom:16px;box-shadow:0 8px 24px rgba(11,27,51,.25)}
+.faq-illus svg{width:40px;height:40px}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Lion Consultancy home">
+      <svg viewBox="0 0 48 48" aria-hidden="true" role="img">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+          <path d="M24 5l4 4 5-1-1 5 4 4-4 4 1 5-5-1-4 4-4-4-5 1 1-5-4-4 4-4-1-5 5 1z"/><circle cx="24" cy="22" r="3"/>
+        </g>
+        <g fill="currentColor"><circle cx="24" cy="5" r="1.4"/><circle cx="33" cy="8" r="1.4"/><circle cx="38" cy="17" r="1.4"/><circle cx="38" cy="27" r="1.4"/><circle cx="33" cy="36" r="1.4"/><circle cx="24" cy="39" r="1.4"/><circle cx="15" cy="36" r="1.4"/><circle cx="10" cy="27" r="1.4"/><circle cx="10" cy="17" r="1.4"/><circle cx="15" cy="8" r="1.4"/></g>
+      </svg>
+      <div>Lion Consultancy<small>Overseas Recruitment</small></div>
+    </a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="jobs.html">Jobs</a>
+      <a href="documents.html">Documents</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <select id="lang" class="lang-select" aria-label="Language"><option value="en">EN</option><option value="hi">हिं</option><option value="gu">ગુ</option></select>
+      <a class="btn btn-wa" data-wa="Hello Lion Consultancy, I want to apply for a job abroad. Please guide me." href="#" aria-label="WhatsApp Us">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5-.1-.2-.5-1.4-.7-1.9-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+        <span data-i18n="wa">WhatsApp Us</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Mobile">
+      <a href="index.html">Home</a><a href="about.html">About Us</a><a href="jobs.html">Jobs</a>
+      <a href="documents.html">Documents</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ DOCS HERO ============ -->
+<section class="docs-hero">
+  <div class="container docs-hero-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--gold-2)">Be prepared</span>
+      <h1>Get your documents ready</h1>
+      <p class="lead mt-2">Prepare your documents before you apply. It saves weeks and prevents rejection. Tick each item as you collect it.</p>
+      <div class="btn-row">
+        <button class="btn btn-gold no-print" id="print-ck" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z"/></svg>
+          Print checklist
+        </button>
+        <a class="btn btn-wa no-print" data-wa="Hello Lion Consultancy, I have my documents ready. Please do a free document check for me." href="#">Free document check</a>
+      </div>
+    </div>
+
+    <!-- Animated passport illustration -->
+    <div class="passport-illus" aria-hidden="true">
+      <svg viewBox="0 0 320 280" role="img" aria-label="Illustration of passport and documents">
+        <defs>
+          <linearGradient id="pcover" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0B1B33"/><stop offset="1" stop-color="#132A4A"/>
+          </linearGradient>
+          <linearGradient id="pgold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#C9A24B"/><stop offset="1" stop-color="#E0BE6E"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Behind: papers -->
+        <g transform="translate(60 40) rotate(-6)">
+          <rect width="180" height="220" rx="10" fill="#F7F4EE" stroke="#E3DED2" stroke-width="1.5"/>
+          <rect x="16" y="20" width="148" height="8" rx="4" fill="#E3DED2"/>
+          <rect x="16" y="40" width="100" height="8" rx="4" fill="#E3DED2"/>
+          <rect x="16" y="70" width="148" height="6" rx="3" fill="#EEEAE0"/>
+          <rect x="16" y="86" width="130" height="6" rx="3" fill="#EEEAE0"/>
+          <rect x="16" y="102" width="148" height="6" rx="3" fill="#EEEAE0"/>
+        </g>
+
+        <!-- Passport (front) -->
+        <g class="float" transform="translate(110 60)">
+          <rect width="140" height="190" rx="10" fill="url(#pcover)" stroke="url(#pgold)" stroke-width="1.5"/>
+          <rect x="8" y="8" width="124" height="174" rx="6" fill="none" stroke="url(#pgold)" stroke-width=".6" opacity=".5"/>
+
+          <!-- Emblem -->
+          <g transform="translate(70 65)" fill="none" stroke="url(#pgold)" stroke-width="1.4">
+            <path d="M0 -22l5 5 7-2-2 7 5 5-5 5 2 7-7-2-5 5-5-5-7 2 2-7-5-5 5-5-2-7 7 2z"/>
+            <circle r="3"/>
+          </g>
+          <text x="70" y="110" text-anchor="middle" fill="url(#pgold)" font-family="Fraunces,serif" font-size="11" font-weight="700">PASSPORT</text>
+          <text x="70" y="126" text-anchor="middle" fill="#9FAEC4" font-family="sans-serif" font-size="7">LION CONSULTANCY</text>
+          <line x1="24" y1="140" x2="116" y2="140" stroke="url(#pgold)" stroke-width=".8" opacity=".5"/>
+          <text x="70" y="155" text-anchor="middle" fill="#C9D3E2" font-family="monospace" font-size="6">P&lt;LION&lt;&lt;VERIFIED&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+        </g>
+
+        <!-- Stamp -->
+        <g class="stamp-anim" transform="translate(230 190) rotate(-12)">
+          <circle r="38" fill="none" stroke="#25D366" stroke-width="2.5" opacity=".85"/>
+          <circle r="30" fill="none" stroke="#25D366" stroke-width="1" opacity=".6"/>
+          <text text-anchor="middle" y="-4" fill="#25D366" font-family="sans-serif" font-size="9" font-weight="700">VERIFIED</text>
+          <text text-anchor="middle" y="8" fill="#25D366" font-family="sans-serif" font-size="7">LION CONSULTANCY</text>
+          <text text-anchor="middle" y="18" fill="#25D366" font-family="sans-serif" font-size="6">2025</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHECKLIST ============ -->
+<section class="section">
+  <div class="container">
+    <h2>Interactive checklist</h2>
+    <p class="lead mt-2">Tick what you already have. Your progress is remembered during this visit only.</p>
+
+    <!-- Category group cards above checklist -->
+    <div class="grid grid-4 mt-6" style="gap:14px">
+      <div class="doc-cat reveal">
+        <div class="cat-head">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 16h8M10 20h4"/></svg></div>
+          <h3>Identity</h3>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin:0">Passport &amp; photos</p>
+      </div>
+      <div class="doc-cat reveal" data-delay="1">
+        <div class="cat-head">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg></div>
+          <h3>Education</h3>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin:0">Certificates &amp; experience letters</p>
+      </div>
+      <div class="doc-cat reveal" data-delay="2">
+        <div class="cat-head">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v4M12 21a6 6 0 0 0 6-6c0-3-2-4-2-7h-8c0 3-2 4-2 7a6 6 0 0 0 6 6z"/><circle cx="12" cy="15" r="1.5" fill="currentColor"/></svg></div>
+          <h3>Medical</h3>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin:0">Fitness &amp; vaccination</p>
+      </div>
+      <div class="doc-cat reveal" data-delay="3">
+        <div class="cat-head">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l9 4v6c0 5-4 9-9 10-5-1-9-5-9-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Legal</h3>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted);margin:0">Police &amp; attestation</p>
+      </div>
+    </div>
+
+    <div class="checklist mt-8" id="checklist">
+      <!-- Identity -->
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-passport">
+        <div>
+          <label for="ck-passport"><strong>Valid passport</strong></label>
+          <div class="desc">Minimum 6 months validity from travel date. 2 blank pages.</div>
+          <div class="meta">Get it from: Passport office · Takes: 5–15 days</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-photos">
+        <div>
+          <label for="ck-photos"><strong>Passport-size photos</strong></label>
+          <div class="desc">White background, 35×45mm, recent, no glasses or headwear (except religious).</div>
+          <div class="meta">Get it from: Photo studio · Takes: Same day</div>
+        </div>
+      </div>
+
+      <!-- Education & experience -->
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-education">
+        <div>
+          <label for="ck-education"><strong>Education certificates</strong></label>
+          <div class="desc">School/college certificates. Name must match passport exactly.</div>
+          <div class="meta">Common mistake: name mismatch · Get from: Issuing school</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-experience">
+        <div>
+          <label for="ck-experience"><strong>Experience letters</strong></label>
+          <div class="desc">From previous employers, on letterhead, with duties and dates.</div>
+          <div class="meta">Get it from: Previous employers · Takes: 1–2 weeks</div>
+        </div>
+      </div>
+
+      <!-- Medical -->
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-medical">
+        <div>
+          <label for="ck-medical"><strong>Medical fitness certificate</strong></label>
+          <div class="desc">From a government-approved medical centre. Must pass the fit-for-work screening.</div>
+          <div class="meta">Get it from: Approved medical centre · Takes: 2–5 days</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-vaccine">
+        <div>
+          <label for="ck-vaccine"><strong>Vaccination records</strong></label>
+          <div class="desc">Some countries require specific vaccinations. Ask us which apply to your destination.</div>
+          <div class="meta">Get it from: Clinic · Takes: 1–2 days</div>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-police">
+        <div>
+          <label for="ck-police"><strong>Police clearance certificate</strong></label>
+          <div class="desc">Required by most destinations. Must be issued within the last 6 months.</div>
+          <div class="meta">Get it from: Police station / online portal · Takes: 1–4 weeks [VERIFY]</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-attest">
+        <div>
+          <label for="ck-attest"><strong>Attestation of certificates</strong></label>
+          <div class="desc">Some countries require Ministry of External Affairs and embassy attestation.</div>
+          <div class="meta">Get it from: MEA + destination embassy · Takes: 2–4 weeks [VERIFY]</div>
+        </div>
+      </div>
+
+      <!-- Job-specific -->
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-licence">
+        <div>
+          <label for="ck-licence"><strong>Driving licence (for driving jobs)</strong></label>
+          <div class="desc">Valid in your home country. Some countries require conversion after arrival.</div>
+          <div class="meta">Get it from: Traffic authority · Takes: Same day if valid</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <input type="checkbox" id="ck-care">
+        <div>
+          <label for="ck-care"><strong>Care certificate (for healthcare jobs)</strong></label>
+          <div class="desc">A recognised care or nursing certificate helps your application.</div>
+          <div class="meta">Get it from: Recognised training centre · Takes: Varies</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-progress no-print">
+      <b id="ck-count">0 / 10</b>
+      <div class="bar"><i id="ck-bar"></i></div>
+      <span style="font-size:.82rem;color:#C9D3E2">Collected</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTRY TABS ============ -->
+<section class="section" style="background:var(--paper)">
+  <div class="container" data-tabs>
+    <span class="eyebrow">Country requirements</span>
+    <h2>Country-wise requirements</h2>
+    <p class="lead mt-2">Requirements vary by country and employer. Check the exact list in your offer letter. <span class="verify-tag">Verify</span></p>
+
+    <div class="tabs mt-6" role="tablist" aria-label="Country groups">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="tab-gulf" id="tab-btn-gulf">
+        <span class="country-flag-tab" style="background:#00732F;color:#fff">AE</span>
+        Gulf
+      </button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-europe" id="tab-btn-europe">
+        <span class="country-flag-tab" style="background:#003399;color:#fff">EU</span>
+        Europe
+      </button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-asia" id="tab-btn-asia">
+        <span class="country-flag-tab" style="background:#CC0001;color:#fff">AS</span>
+        Asia
+      </button>
+    </div>
+
+    <div class="tab-panel active" id="tab-gulf" role="tabpanel" aria-labelledby="tab-btn-gulf">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Document</th><th>Required</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Passport (6+ months)</td><td>Yes</td><td>2 blank pages</td></tr>
+            <tr><td>Photos (white bg)</td><td>Yes</td><td>6–10 copies</td></tr>
+            <tr><td>Medical fitness</td><td>Yes</td><td>From approved centre</td></tr>
+            <tr><td>Police clearance</td><td>Yes</td><td>Within 6 months</td></tr>
+            <tr><td>Attestation</td><td>Sometimes</td><td>Per employer</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="tab-panel" id="tab-europe" role="tabpanel" aria-labelledby="tab-btn-europe">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Document</th><th>Required</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Passport (6+ months)</td><td>Yes</td><td>2 blank pages</td></tr>
+            <tr><td>Photos (white bg)</td><td>Yes</td><td>4–6 copies</td></tr>
+            <tr><td>Medical fitness</td><td>Yes</td><td>Plus vaccination records</td></tr>
+            <tr><td>Police clearance</td><td>Yes</td><td>Within 3–6 months</td></tr>
+            <tr><td>Education / experience</td><td>Often</td><td>Attested copies</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="tab-panel" id="tab-asia" role="tabpanel" aria-labelledby="tab-btn-asia">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Document</th><th>Required</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Passport (6+ months)</td><td>Yes</td><td>2 blank pages</td></tr>
+            <tr><td>Photos (white bg)</td><td>Yes</td><td>6 copies</td></tr>
+            <tr><td>Medical fitness</td><td>Yes</td><td>From approved centre</td></tr>
+            <tr><td>Police clearance</td><td>Sometimes</td><td>Per employer</td></tr>
+            <tr><td>Attestation</td><td>Rare</td><td>Per employer</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTO GUIDELINES ============ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Photo &amp; scan tips</span>
+    <h2>How to scan documents correctly</h2>
+    <div class="grid grid-3 mt-8">
+      <div class="guide-card reveal">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <rect x="20" y="30" width="160" height="100" rx="6" fill="#F7F4EE" stroke="#C9A24B" stroke-width="2"/>
+          <rect x="40" y="45" width="50" height="70" rx="3" fill="#fff" stroke="#5A6B7F"/>
+          <circle cx="65" cy="65" r="12" fill="#C9A24B"/>
+          <path d="M45 105h40M45 115h30" stroke="#5A6B7F" stroke-width="2" stroke-linecap="round"/>
+          <path d="M120 55h45M120 70h45M120 85h35" stroke="#5A6B7F" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h3>Passport photo page</h3>
+        <p>Full page, flat, no glare. All 4 corners visible. Text must be readable.</p>
+      </div>
+      <div class="guide-card reveal" data-delay="1">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <rect x="30" y="20" width="140" height="100" rx="4" fill="#fff" stroke="#C9A24B" stroke-width="2"/>
+          <rect x="50" y="40" width="100" height="10" fill="#E3DED2"/>
+          <rect x="50" y="60" width="100" height="10" fill="#E3DED2"/>
+          <rect x="50" y="80" width="60" height="10" fill="#E3DED2"/>
+          <path d="M50 105l20-15 15 10 25-20" stroke="#25D366" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <h3>Certificates</h3>
+        <p>Straight, well-lit, all text visible. Use a scanner app if you have no scanner.</p>
+      </div>
+      <div class="guide-card reveal" data-delay="2">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <circle cx="100" cy="60" r="30" fill="#F7F4EE" stroke="#C9A24B" stroke-width="2"/>
+          <circle cx="100" cy="50" r="10" fill="#C9A24B"/>
+          <path d="M85 75c0-8 7-13 15-13s15 5 15 13" fill="#C9A24B"/>
+          <rect x="55" y="100" width="90" height="20" rx="3" fill="#fff" stroke="#5A6B7F" stroke-width="2"/>
+          <path d="M65 110h30" stroke="#5A6B7F" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h3>Passport photos</h3>
+        <p>White background, plain face, no glasses, no headwear. 35×45mm.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="section" style="background:var(--paper)">
+  <div class="container">
+    <span class="eyebrow">Timeline</span>
+    <h2>What happens after you submit</h2>
+    <div class="doc-timeline">
+      <div class="doc-timeline-step reveal">
+        <div class="step-num">1</div>
+        <h4>Documents submitted</h4>
+        <div class="t">Day 1</div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:6px">Send on WhatsApp or visit our office.</p>
+      </div>
+      <div class="doc-timeline-step reveal" data-delay="1">
+        <div class="step-num">2</div>
+        <h4>Document review</h4>
+        <div class="t">1–3 days</div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:6px">We flag name mismatches and errors before you pay.</p>
+      </div>
+      <div class="doc-timeline-step reveal" data-delay="2">
+        <div class="step-num">3</div>
+        <h4>Visa decision</h4>
+        <div class="t">2–6 weeks [VERIFY]</div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:6px">We submit and follow up. Updates at every stage.</p>
+      </div>
+      <div class="doc-timeline-step reveal" data-delay="3">
+        <div class="step-num">4</div>
+        <h4>Deployment</h4>
+        <div class="t">1–2 weeks [VERIFY]</div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:6px">Medical, travel, briefing — then you fly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Questions</span>
+    <h2>Document FAQ</h2>
+    <div class="grid grid-2 mt-8" style="align-items:start;gap:32px">
+      <div>
+        <div class="faq-illus">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 4 3v1M12 17h.01"/></svg>
+        </div>
+        <h3>Common questions</h3>
+        <p style="color:var(--muted);margin-top:6px">Answers to the questions we hear most often about documents and processing.</p>
+      </div>
+      <div>
+        <details><summary>My passport is about to expire. Can I still apply?</summary><div class="body">No — most countries require at least 6 months of validity from your travel date. Renew your passport first, then apply.</div></details>
+        <details><summary>My name is spelled differently on different documents. What do I do?</summary><div class="body">This is the most common cause of rejection. Get the name corrected on your passport first, then re-issue or correct other documents to match.</div></details>
+        <details><summary>Do I need to attest my certificates?</summary><div class="body">For most Gulf countries, attestation is required for education and experience certificates. Costs and timelines vary — ask us for the exact list for your destination. [VERIFY]</div></details>
+        <details><summary>I lost my passport. What now?</summary><div class="body">File a police report, then apply for a new passport. You cannot apply for a work visa without a valid passport. We can guide you through the steps.</div></details>
+        <details><summary>What if my documents get rejected?</summary><div class="body">We check every document before submission to catch problems early. If a document is rejected, we tell you exactly what to fix and how.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section" style="background:var(--paper);text-align:center">
+  <div class="container">
+    <h2>Send your documents for a free check</h2>
+    <p class="lead mt-2" style="margin-inline:auto">We review every document before you pay anything. It takes 1–2 working days.</p>
+    <a class="btn btn-wa mt-6" data-wa="Hello Lion Consultancy, I want a free document check. I am sending my passport and other documents now." href="#">Send on WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Lion Consultancy">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M24 5l4 4 5-1-1 5 4 4-4 4 1 5-5-1-4 4-4-4-5 1 1-5-4-4 4-4-1-5 5 1z"/><circle cx="24" cy="22" r="3"/></g></svg>
+          <div>Lion Consultancy<small>Overseas Recruitment</small></div>
+        </a>
+        <p class="mt-2">Licensed overseas recruitment agency. Work visa, work permit and worker supply with transparent fees and written contracts.</p>
+        <span class="footer-license">Licence: [LICENSE NUMBER]</span>
+      </div>
+      <div><h4>Pages</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="jobs.html">Jobs</a><a href="documents.html">Documents</a><a href="contact.html">Contact</a></div>
+      <div><h4>Contact</h4><a data-call href="#">[PHONE]</a><a data-mail href="#">[EMAIL]</a><p class="mt-2">[ADDRESS]</p></div>
+      <div><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Refund Policy</a><p class="mt-2" style="font-size:.8rem">Safety note: we never ask for money on social media or personal accounts. Pay only against an official receipt.</p></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="yr"></span> Lion Consultancy. All rights reserved.</span><span>Licence: [LICENSE NUMBER] · [ADDRESS]</span></div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-navy" data-call href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c0 8 7 15 15 15l2-3-4-3-2 2c-2-1-4-3-5-5l2-2-3-4z"/></svg>Call</a>
+  <a class="btn btn-wa" data-wa="Hello Lion Consultancy, I want to apply for a job abroad. Please guide me." href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5-.1-.2-.5-1.4-.7-1.9-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a>
+</div>
+
+<div class="consent" id="consent">
+  <span>We use cookies to improve your experience. See our <a href="#" style="color:var(--gold);font-weight:700">Privacy Policy</a>.</span>
+  <button class="btn btn-navy" data-consent>Got it</button>
+</div>
+
+<script src="script.js"></script>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
